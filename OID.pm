@@ -27,7 +27,8 @@ sub _read_graph {
 		}
 
 		# Process OID.
-		my @oid = split m/\./ms, $line;
+		my ($line_oid, $line_label) = split m/\s+/ms, $line, 2;
+		my @oid = split m/\./ms, $line_oid;
 		my $last_oid;
 		my $act_oid = $EMPTY_STR;
 		foreach my $oid (@oid) {
@@ -36,6 +37,13 @@ sub _read_graph {
 			}
 			$act_oid .= $oid;
 			$graph->add_vertex($act_oid);
+			if ($act_oid eq $line_oid) {
+				if (! $line_label) {
+					$line_label = $line_oid;
+				}
+				$graph->set_vertex_attribute($act_oid, 'label',
+					$line_label);
+			}
 			if (defined $last_oid) {
 				$graph->add_edge($last_oid, $act_oid);
 			}
@@ -86,8 +94,8 @@ Graph::Reader::OID - Perl class for reading a graph from OID format.
  File format with OID list.
  For OID (Object identifier) see L<Object identifier|https://en.wikipedia.org/wiki/Object_identifier>
  Example:
- 1.2.410.200047.11.2013.10234913023321120142141561581
- 1.2.276.0.7230010.3.0.3.6.1
+ 1.2.410.200047.11.2013.10234913023321120142141561581 Label #1
+ 1.2.276.0.7230010.3.0.3.6.1 Label #2
 
 =head1 EXAMPLE
 
@@ -102,8 +110,8 @@ Graph::Reader::OID - Perl class for reading a graph from OID format.
 
  # Example data.
  my $data = <<'END';
- 1.2.410.200047.11.2013.10234913023321120142141561581
- 1.2.276.0.7230010.3.0.3.6.1
+ 1.2.410.200047.11.2013.10234913023321120142141561581 Label #1
+ 1.2.276.0.7230010.3.0.3.6.1 Label #2
  END
 
  # Temporary file.
@@ -125,7 +133,7 @@ Graph::Reader::OID - Perl class for reading a graph from OID format.
  unlink $tempfile;
 
  # Output:
- # TODO
+ # 1-1.2,1.2-1.2.276,1.2-1.2.410,1.2.276-1.2.276.0,1.2.276.0-1.2.276.0.7230010,1.2.276.0.7230010-1.2.276.0.7230010.3,1.2.276.0.7230010.3-1.2.276.0.7230010.3.0,1.2.276.0.7230010.3.0-1.2.276.0.7230010.3.0.3,1.2.276.0.7230010.3.0.3-1.2.276.0.7230010.3.0.3.6,1.2.276.0.7230010.3.0.3.6-1.2.276.0.7230010.3.0.3.6.1,1.2.410-1.2.410.200047,1.2.410.200047-1.2.410.200047.11,1.2.410.200047.11-1.2.410.200047.11.2013,1.2.410.200047.11.2013-1.2.410.200047.11.2013.10234913023321120142141561581
 
 =head1 DEPENDENCIES
 
