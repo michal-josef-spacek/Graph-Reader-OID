@@ -27,6 +27,7 @@ sub _read_graph {
 			if (defined $last_oid) {
 				$graph->add_edge($last_oid, $oid);
 			}
+			$last_oid = $oid;
 		}
 	}
 	return;
