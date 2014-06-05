@@ -5,6 +5,13 @@ use base qw(Graph::Reader);
 use strict;
 use warnings;
 
+# Modules.
+use Readonly;
+
+# Constants.
+Readonly::Scalar our $DOT => q{.};
+Readonly::Scalar our $EMPTY_STR => q{};
+
 # Version.
 our $VERSION = 0.01;
 
@@ -22,12 +29,17 @@ sub _read_graph {
 		# Process OID.
 		my @oid = split m/\./ms, $line;
 		my $last_oid;
+		my $act_oid = $EMPTY_STR;
 		foreach my $oid (@oid) {
-			$graph->add_vertex($oid);
-			if (defined $last_oid) {
-				$graph->add_edge($last_oid, $oid);
+			if ($act_oid ne $EMPTY_STR) {
+				$act_oid .= $DOT;
 			}
-			$last_oid = $oid;
+			$act_oid .= $oid;
+			$graph->add_vertex($act_oid);
+			if (defined $last_oid) {
+				$graph->add_edge($last_oid, $act_oid);
+			}
+			$last_oid = $act_oid;
 		}
 	}
 	return;
@@ -117,7 +129,8 @@ Graph::Reader::OID - Perl class for reading a graph from OID format.
 
 =head1 DEPENDENCIES
 
-L<Graph::Reader>.
+L<Graph::Reader>,
+L<Readonly>.
 
 =head1 SEE ALSO
 
