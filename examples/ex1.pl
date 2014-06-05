@@ -22,7 +22,7 @@ my (undef, $tempfile) = tempfile();
 barf($tempfile, $data);
 
 # Reader object.
-my $obj = Graph::Reader::TGF->new;
+my $obj = Graph::Reader::OID->new;
 
 # Get graph from file.
 my $g = $obj->read_graph($tempfile);
