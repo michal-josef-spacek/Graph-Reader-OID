@@ -34,4 +34,4 @@ resources:
   homepage: https://github.com/tupinek/Graph-Reader-OID
   license: http://opensource.org/licenses/BSD-3-Clause
   repository: git://github.com/tupinek/Graph-Reader-OID
-version: 0.01
+version: 0.02
