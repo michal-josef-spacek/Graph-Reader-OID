@@ -15,6 +15,7 @@ MANIFEST			This list of files
 META.yml
 OID.pm
 README
+SIGNATURE
 t/Graph-Reader-OID/00-use.t
 t/Graph-Reader-OID/01-version.t
 t/Graph-Reader-OID/02-pod_coverage.t
