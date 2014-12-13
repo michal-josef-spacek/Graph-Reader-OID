@@ -1,7 +1,6 @@
 TODO
 ====
 2. Vertex label by mohla byt interpretace toho cisla.
-3. Testy.
 4.
 
 Applied
@@ -9,3 +8,6 @@ Applied
 1. Pridat label k OID - za mezerou vsechen text do konce radku.
    Label by se mel pridat k poslednimu nodu.
 OK [20140605] skim
+
+3. Testy.
+OK [20141213] skim
