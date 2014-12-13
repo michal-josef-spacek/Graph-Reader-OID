@@ -13,7 +13,7 @@ Readonly::Scalar our $DOT => q{.};
 Readonly::Scalar our $EMPTY_STR => q{};
 
 # Version.
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 # Read graph subroutine.
 sub _read_graph {
@@ -168,6 +168,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut
