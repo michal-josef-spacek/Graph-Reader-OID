@@ -16,7 +16,13 @@ META.yml
 OID.pm
 README
 SIGNATURE
+t/data/ex1.oid
+t/data/ex2.oid
+t/data/ex3.oid
+t/data/ex4.oid
 t/Graph-Reader-OID/00-use.t
 t/Graph-Reader-OID/01-version.t
 t/Graph-Reader-OID/02-pod_coverage.t
 t/Graph-Reader-OID/03-pod.t
+t/Graph-Reader-OID/04-new.t
+t/Graph-Reader-OID/05-read_graph.t
