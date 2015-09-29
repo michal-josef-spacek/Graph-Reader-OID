@@ -1,6 +1,7 @@
 0.03
  - Improve SEE ALSO section in doc.
  - Update Module::Install to 1.16 version.
+ - Update copyright years.
 
 0.02 2014-12-13T11:20:57+01:00
  - Add tests.
