@@ -3,14 +3,10 @@ abstract: 'Perl class for reading a graph from OID format.'
 author:
   - 'Michal Spacek <skim@cpan.org>'
 build_requires:
-  Encode: 0
-  English: 0
   ExtUtils::MakeMaker: 6.36
   File::Object: 0.07
   Test::More: 0
   Test::NoWarnings: 0
-  Test::Pod: 0
-  Test::Pod::Coverage: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.36
 distribution_type: module
@@ -26,6 +22,7 @@ no_index:
     - examples
     - inc
     - t
+    - xt
 requires:
   Graph::Reader: 0
   perl: 5.6.2
