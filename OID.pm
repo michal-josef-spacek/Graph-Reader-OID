@@ -156,7 +156,7 @@ Install the Graph::Writer modules.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/Graph-Reader-OID>
+L<https://github.com/michal-josef-spacek/Graph-Reader-OID>
 
 =head1 AUTHOR
 
