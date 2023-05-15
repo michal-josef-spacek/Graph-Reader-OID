@@ -18,8 +18,7 @@ readme_from 'OID.pm';
 recursive_author_tests('xt');
 requires 'Graph::Reader' => 0;
 requires 'perl' => '5.6.2';
-resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
-	'?Name=Graph-Reader-OID';
+resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Graph-Reader-OID/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Graph-Reader-OID';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Graph-Reader-OID';
 test_requires 'File::Object' => 0.07;
