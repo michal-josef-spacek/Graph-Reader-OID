@@ -25,6 +25,7 @@ no_index:
     - xt
 requires:
   Graph::Reader: 0
+  Readonly: 0
   perl: 5.6.2
 resources:
   bugtracker: https://github.com/michal-josef-spacek/Graph-Reader-OID/issues

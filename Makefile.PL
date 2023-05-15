@@ -17,6 +17,7 @@ name 'Graph-Reader-OID';
 readme_from 'OID.pm';
 recursive_author_tests('xt');
 requires 'Graph::Reader' => 0;
+requires 'Readonly' => 0;
 requires 'perl' => '5.6.2';
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Graph-Reader-OID/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Graph-Reader-OID';
