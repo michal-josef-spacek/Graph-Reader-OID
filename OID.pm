@@ -1,11 +1,9 @@
 package Graph::Reader::OID;
 
-# Pragmas.
 use base qw(Graph::Reader);
 use strict;
 use warnings;
 
-# Modules.
 use Readonly;
 
 # Constants.
@@ -99,11 +97,9 @@ Graph::Reader::OID - Perl class for reading a graph from OID format.
 
 =head1 EXAMPLE
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Graph::Reader::OID;
  use IO::Barf qw(barf);
  use File::Temp qw(tempfile);

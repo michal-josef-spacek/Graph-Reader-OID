@@ -25,11 +25,9 @@ OID FILE FORMAT
      1.2.276.0.7230010.3.0.3.6.1 Label #2
 
 EXAMPLE
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Graph::Reader::OID;
      use IO::Barf qw(barf);
      use File::Temp qw(tempfile);
