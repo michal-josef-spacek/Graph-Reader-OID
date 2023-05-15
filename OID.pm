@@ -98,6 +98,8 @@ Graph::Reader::OID - Perl class for reading a graph from OID format.
 
 =head1 EXAMPLE
 
+=for comment filename=read_oid_graph_and_print.pl
+
  use strict;
  use warnings;
 
