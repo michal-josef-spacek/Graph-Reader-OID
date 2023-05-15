@@ -66,6 +66,7 @@ Graph::Reader::OID - Perl class for reading a graph from OID format.
 =head1 SYNOPSIS
 
  use Graph::Reader::OID;
+
  my $obj = Graph::Reader::OID->new;
  my $graph = $obj->read_graph($oid_file);
 
