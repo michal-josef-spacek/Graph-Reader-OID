@@ -11,7 +11,7 @@ Readonly::Scalar our $DOT => q{.};
 Readonly::Scalar our $EMPTY_STR => q{};
 
 # Version.
-our $VERSION = 0.05;
+our $VERSION = 0.06;
 
 # Read graph subroutine.
 sub _read_graph {
@@ -175,6 +175,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.05
+0.06
 
 =cut
